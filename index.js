@@ -77,3 +77,5 @@ server.get("/demo", async (req, res) => {
   res.header("Access-Control-Allow-Headers", "*");
   res.json(docs);
 });
+
+module.exports = server;
