@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", true);
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -28,7 +29,7 @@ const User = mongoose.model("User", userSchema);
 
 server.get("/", (req, res) => {
   res.send("hello");
-})
+});
 
 server.post("/demo", async (req, res) => {
   console.log(req.body);
