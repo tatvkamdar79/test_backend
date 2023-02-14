@@ -4,6 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const server = express();
+const port = process.env.PORT || 8080;
 
 server.use(cors());
 server.use(bodyParser.json());
@@ -15,7 +16,7 @@ mongoose
   .then((result) => {
     // console.log(result);
     console.log("Connections to DB made.");
-    server.listen(8080);
+    server.listen(port);
   })
   .catch((err) => console.log(err));
 
